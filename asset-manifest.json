@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/%7Bweb_project_around_react%7D/static/css/main.6b367bea.css",
-    "main.js": "/%7Bweb_project_around_react%7D/static/js/main.6cfcb742.js",
-    "static/js/453.8d428687.chunk.js": "/%7Bweb_project_around_react%7D/static/js/453.8d428687.chunk.js",
-    "static/media/InterVariable.woff2": "/%7Bweb_project_around_react%7D/static/media/InterVariable.a0e477f2f1f9d2376fde.woff2",
-    "static/media/heart.svg": "/%7Bweb_project_around_react%7D/static/media/heart.3826c074a1b94b101e38.svg",
-    "index.html": "/%7Bweb_project_around_react%7D/index.html",
-    "static/media/Delete.svg": "/%7Bweb_project_around_react%7D/static/media/Delete.c4956c32989e66228de8.svg",
-    "main.6b367bea.css.map": "/%7Bweb_project_around_react%7D/static/css/main.6b367bea.css.map",
-    "main.6cfcb742.js.map": "/%7Bweb_project_around_react%7D/static/js/main.6cfcb742.js.map",
-    "453.8d428687.chunk.js.map": "/%7Bweb_project_around_react%7D/static/js/453.8d428687.chunk.js.map"
+    "main.css": "/web_project_around_react/static/css/main.000ae7ae.css",
+    "main.js": "/web_project_around_react/static/js/main.dc3529e5.js",
+    "static/js/453.8d428687.chunk.js": "/web_project_around_react/static/js/453.8d428687.chunk.js",
+    "static/media/InterVariable.woff2": "/web_project_around_react/static/media/InterVariable.a0e477f2f1f9d2376fde.woff2",
+    "static/media/heart.svg": "/web_project_around_react/static/media/heart.3826c074a1b94b101e38.svg",
+    "index.html": "/web_project_around_react/index.html",
+    "static/media/Delete.svg": "/web_project_around_react/static/media/Delete.c4956c32989e66228de8.svg",
+    "main.000ae7ae.css.map": "/web_project_around_react/static/css/main.000ae7ae.css.map",
+    "main.dc3529e5.js.map": "/web_project_around_react/static/js/main.dc3529e5.js.map",
+    "453.8d428687.chunk.js.map": "/web_project_around_react/static/js/453.8d428687.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b367bea.css",
-    "static/js/main.6cfcb742.js"
+    "static/css/main.000ae7ae.css",
+    "static/js/main.dc3529e5.js"
   ]
 }
