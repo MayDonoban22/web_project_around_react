@@ -1,4 +1,5 @@
-{"homepage": "https://{MayDonoban22}.github.io/{web_project_around_react}",
+{
+  "homepage": "https://maydonoban22.github.io/web_project_around_react",
   "name": "web_project_around_react",
   "version": "0.1.0",
   "private": true,
