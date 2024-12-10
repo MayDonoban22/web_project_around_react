@@ -10,6 +10,8 @@ import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import EditProfile from "./Main/Popup/EditProfile/EditProfile";
 import NewCard from "./Main/Popup/NewCard/NewCard";
 import EditAvatar from "./Main/Popup/EditAvatar/EditAvatar";
+import RemoveCard from "./Main/Popup/RemoveCard/RemoveCard";
+
 function App() {
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
@@ -156,15 +158,12 @@ function App() {
           isAddPlacePopupOpen={isAddPlacePopupOpen}
           onClose={closeAllPopups}
         />
-
-        <PopupWithForm
-          name="delete-card"
-          title="¿Estás seguro?"
-          onSubmit={handleDeleteTrash}
-          isOpen={isDeleteTrashOpen}
+        <RemoveCard
+          handleDeleteTrash={handleDeleteTrash}
+          isDeleteTrashOpen={isDeleteTrashOpen}
           onClose={closeAllPopups}
-          buttonText="Sí"
-        ></PopupWithForm>
+        />
+
         <Header />
 
         <Main
