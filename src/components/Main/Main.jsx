@@ -1,12 +1,18 @@
-import React from "react";
-import Card from "./Card";
+import React, { useContext } from "react";
+import Card from "./Card/Card";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function Main(props) {
+  const userContext = useContext(CurrentUserContext);
+  const { currentUser } = userContext;
+
+  if (!currentUser) return null;
+
   return (
     <main className="content">
       <section className="content__profile">
         <div className="content__pencil">
-          <img className="content__image" src={props.profileAvatar} />
+          <img className="content__image" src={currentUser.avatar} />
           <button
             onClick={props.onEditAvatarclick}
             className="content__image-overlay"
@@ -14,8 +20,8 @@ function Main(props) {
         </div>
 
         <div className="content__info">
-          <span className="content__name">{props.profileName}</span>
-          <p className="content__profession">{props.profileAbout}</p>
+          <span className="content__name">{currentUser.name}</span>
+          <p className="content__profession">{currentUser.about}</p>
         </div>
         <button
           onClick={props.onEditProfileclick}
@@ -37,6 +43,8 @@ function Main(props) {
               card={element}
               onCardClick={props.onCardClick}
               onEditDeleteTrashclick={props.onEditDeleteTrashclick}
+              onLikeClick={props.onHandleCardLike}
+              onDeleteClick={props.onHandleCardDelete}
             />
           );
         })}

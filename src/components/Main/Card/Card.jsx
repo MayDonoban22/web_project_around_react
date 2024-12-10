@@ -2,6 +2,17 @@ function Card(props) {
   function handleClick() {
     props.onCardClick(props.card);
   }
+  const cardLikeButtonClassName = `content__description-like ${
+    props.card.isLiked ? "content__description-like-focus" : ""
+  }`;
+
+  function handleLike() {
+    props.onLikeClick(props.card);
+  }
+
+  function handleDelete() {
+    props.onEditDeleteTrashclick(props.card);
+  }
 
   return (
     <div
@@ -17,14 +28,14 @@ function Card(props) {
       <div className="content__description">
         <p className="content__description-text">{props.card.name}</p>
         <div className="content__likes">
-          <button className="content__description-like"></button>
+          <button
+            onClick={handleLike}
+            className={cardLikeButtonClassName}
+          ></button>
           <p className="content__like-number"></p>
         </div>
       </div>
-      <button
-        onClick={props.onEditDeleteTrashclick}
-        className="content__bin"
-      ></button>
+      <button onClick={handleDelete} className="content__bin"></button>
     </div>
   );
 }
