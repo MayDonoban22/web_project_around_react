@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
-import { CurrentUserContext } from "../../../../contexts/CurrentUserContext";
-import PopupWithForm from "../PopupWithForm";
+import { CurrentUserContext } from "../../../contexts/CurrentUserContext";
+import Popup from "../Popup";
 
 export default function EditProfile(props) {
   const userContext = useContext(CurrentUserContext);
@@ -23,7 +23,7 @@ export default function EditProfile(props) {
   };
 
   return (
-    <PopupWithForm
+    <Popup
       name="popup-profile"
       title="Editar perfil"
       onSubmit={handleSubmit}
@@ -56,6 +56,6 @@ export default function EditProfile(props) {
         required
       />
       <span className="popup__input-error input-about-error"></span>
-    </PopupWithForm>
+    </Popup>
   );
 }

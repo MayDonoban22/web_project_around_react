@@ -1,6 +1,5 @@
 import { useState, useContext } from "react";
-import { CurrentUserContext } from "../../../../contexts/CurrentUserContext";
-import PopupWithForm from "../PopupWithForm";
+import Popup from "../Popup";
 
 export default function NewCard(props) {
   const [name, setName] = useState("");
@@ -12,7 +11,7 @@ export default function NewCard(props) {
     });
   }
   return (
-    <PopupWithForm
+    <Popup
       name="popup-place"
       title="Nuevo lugar"
       onSubmit={handleSubmitNewCard}
@@ -43,6 +42,6 @@ export default function NewCard(props) {
         className="popup__item"
       />
       <span className="popup__input-error input-card-link-error"></span>
-    </PopupWithForm>
+    </Popup>
   );
 }

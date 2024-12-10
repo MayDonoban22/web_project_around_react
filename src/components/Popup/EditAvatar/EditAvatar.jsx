@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
-import { CurrentUserContext } from "../../../../contexts/CurrentUserContext";
-import PopupWithForm from "../PopupWithForm";
+import { CurrentUserContext } from "../../../contexts/CurrentUserContext";
+import Popup from "../Popup";
 
 export default function EditAvatar(props) {
   const userContext = useContext(CurrentUserContext);
@@ -12,7 +12,7 @@ export default function EditAvatar(props) {
   }
 
   return (
-    <PopupWithForm
+    <Popup
       name="edit-avatar"
       title="Actualizar foto de perfil"
       onSubmit={handleSubmit}
@@ -31,6 +31,6 @@ export default function EditAvatar(props) {
         className="popup__item"
       />
       <span className="popup__input-error input-card-link-error"></span>
-    </PopupWithForm>
+    </Popup>
   );
 }

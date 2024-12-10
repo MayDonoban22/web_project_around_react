@@ -1,14 +1,14 @@
-import PopupWithForm from "../PopupWithForm";
+import Popup from "../Popup";
 
 export default function RemoveCard(props) {
   return (
-    <PopupWithForm
+    <Popup
       name="delete-card"
       title="¿Estás seguro?"
       onSubmit={props.handleDeleteTrash}
       isOpen={props.isDeleteTrashOpen}
       onClose={props.onClose}
       buttonText="Sí"
-    ></PopupWithForm>
+    ></Popup>
   );
 }
