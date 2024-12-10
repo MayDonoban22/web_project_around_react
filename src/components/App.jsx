@@ -6,7 +6,7 @@ import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 import { useState } from "react";
 import { api } from "../utils/Api";
-import { CurrentUserContext } from "./contexts/CurrentUserContext";
+import { CurrentUserContext } from "../contexts/CurrentUserContext";
 import EditProfile from "./Main/Popup/EditProfile/EditProfile";
 import NewCard from "./Main/Popup/NewCard/NewCard";
 import EditAvatar from "./Main/Popup/EditAvatar/EditAvatar";
