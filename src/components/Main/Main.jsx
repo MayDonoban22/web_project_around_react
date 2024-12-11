@@ -1,6 +1,11 @@
 import React, { useContext } from "react";
 import Card from "./Card/Card";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
+import EditProfile from "./popup/EditProfile/EditProfile";
+import NewCard from "./popup/NewCard/NewCard";
+import EditAvatar from "./popup/EditAvatar/EditAvatar";
+import RemoveCard from "./popup/RemoveCard/RemoveCard";
+import ImagePopup from "./popup/ImagePopup/ImagePopup";
 
 function Main(props) {
   const userContext = useContext(CurrentUserContext);
@@ -49,6 +54,31 @@ function Main(props) {
           );
         })}
       </section>
+      <ImagePopup
+        name="popup-image"
+        selectedCard={props.selectedCard}
+        onClose={props.closeAllPopups}
+      />
+      <EditAvatar
+        handleEditAvatar={props.handleEditAvatar}
+        isEditAvatarPopupOpen={props.isEditAvatarPopupOpen}
+        onClose={props.closeAllPopups}
+      />
+      <EditProfile
+        handleEditProfile={props.handleEditProfile}
+        isEditProfilePopupOpen={props.isEditProfilePopupOpen}
+        onClose={props.closeAllPopups}
+      />
+      <NewCard
+        handleAddPlace={props.handleCreateCard}
+        isAddPlacePopupOpen={props.isAddPlacePopupOpen}
+        onClose={props.closeAllPopups}
+      />
+      <RemoveCard
+        handleDeleteTrash={props.handleDeleteTrash}
+        isDeleteTrashOpen={props.isDeleteTrashOpen}
+        onClose={props.closeAllPopups}
+      />
     </main>
   );
 }

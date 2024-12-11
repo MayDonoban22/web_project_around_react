@@ -1,15 +1,10 @@
 import { useEffect } from "react";
-import ImagePopup from "./popup/ImagePopup/ImagePopup";
 import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 import { useState } from "react";
 import { api } from "../utils/Api";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import EditProfile from "./popup/EditProfile/EditProfile";
-import NewCard from "./popup/NewCard/NewCard";
-import EditAvatar from "./popup/EditAvatar/EditAvatar";
-import RemoveCard from "./popup/RemoveCard/RemoveCard";
 
 function App() {
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
@@ -137,32 +132,6 @@ function App() {
       value={{ currentUser, handleUpdateUser, handleUpdateAvatar }}
     >
       <div className="page">
-        <ImagePopup
-          name="popup-image"
-          selectedCard={selectedCard}
-          onClose={closeAllPopups}
-        />
-        <EditAvatar
-          handleEditAvatar={handleEditAvatar}
-          isEditAvatarPopupOpen={isEditAvatarPopupOpen}
-          onClose={closeAllPopups}
-        />
-        <EditProfile
-          handleEditProfile={handleEditProfile}
-          isEditProfilePopupOpen={isEditProfilePopupOpen}
-          onClose={closeAllPopups}
-        />
-        <NewCard
-          handleAddPlace={handleCreateCard}
-          isAddPlacePopupOpen={isAddPlacePopupOpen}
-          onClose={closeAllPopups}
-        />
-        <RemoveCard
-          handleDeleteTrash={handleDeleteTrash}
-          isDeleteTrashOpen={isDeleteTrashOpen}
-          onClose={closeAllPopups}
-        />
-
         <Header />
 
         <Main
@@ -177,6 +146,16 @@ function App() {
           onCardClick={handleCardClick}
           onHandleCardLike={handleCardLike}
           onHandleCardDelete={handleCardDelete}
+          selectedCard={selectedCard}
+          closeAllPopups={closeAllPopups}
+          handleEditAvatar={handleEditAvatar}
+          isEditAvatarPopupOpen={isEditAvatarPopupOpen}
+          handleEditProfile={handleEditProfile}
+          isEditProfilePopupOpen={isEditProfilePopupOpen}
+          handleCreateCard={handleCreateCard}
+          isAddPlacePopupOpen={isAddPlacePopupOpen}
+          handleDeleteTrash={handleDeleteTrash}
+          isDeleteTrashOpen={isDeleteTrashOpen}
         />
 
         <Footer />

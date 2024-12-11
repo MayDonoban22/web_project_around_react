@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { CurrentUserContext } from "../../../contexts/CurrentUserContext";
+import { CurrentUserContext } from "../../../../contexts/CurrentUserContext";
 import Popup from "../Popup";
 
 export default function EditProfile(props) {
