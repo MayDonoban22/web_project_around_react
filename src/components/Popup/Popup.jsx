@@ -1,6 +1,6 @@
 import React, { children } from "react";
 
-function PopupWithForm({
+function Popup({
   onClose,
   name,
   title,
@@ -46,4 +46,4 @@ function PopupWithForm({
   );
 }
 
-export default PopupWithForm;
+export default Popup;

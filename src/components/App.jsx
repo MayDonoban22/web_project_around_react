@@ -1,15 +1,15 @@
 import { useEffect } from "react";
-import ImagePopup from "./Popup/ImagePopup/ImagePopup";
+import ImagePopup from "./popup/ImagePopup/ImagePopup";
 import Header from "./Header/Header";
 import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 import { useState } from "react";
 import { api } from "../utils/Api";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
-import EditProfile from "./Popup/EditProfile/EditProfile";
-import NewCard from "./Popup/NewCard/NewCard";
-import EditAvatar from "./Popup/EditAvatar/EditAvatar";
-import RemoveCard from "./Popup/RemoveCard/RemoveCard";
+import EditProfile from "./popup/EditProfile/EditProfile";
+import NewCard from "./popup/NewCard/NewCard";
+import EditAvatar from "./popup/EditAvatar/EditAvatar";
+import RemoveCard from "./popup/RemoveCard/RemoveCard";
 
 function App() {
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
