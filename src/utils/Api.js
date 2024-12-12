@@ -1,5 +1,3 @@
-import React from "react";
-
 
 export default class Api {
     constructor(baseUrl, headers) {
@@ -50,26 +48,6 @@ export default class Api {
             return Promise.reject("Error en la solicitud");
         });
     }
-    // likesCard(cardId) {
-    //     return fetch(`${this.baseUrl}cards/likes/${cardId}`, {
-    //         method: "PUT",
-    //         headers: this.headers,
-    //         body: JSON.stringify(),
-    //     }).then((response) => {
-    //         if (response.ok) return response.json();
-    //         return Promise.reject("Error en la solicitud");
-    //     });
-    // }
-    // deleteLike(cardId) {
-    //     return fetch(`${this.baseUrl}cards/likes/${cardId}`, {
-    //         method: "DELETE",
-    //         headers: this.headers,
-    //         body: JSON.stringify(),
-    //     }).then((response) => {
-    //         if (response.ok) return response.json();
-    //         return Promise.reject("Error en la solicitud");
-    //     });
-    // }
 
     changeLikeCardStatus(cardId, isLiked) {
         const method = isLiked ? "DELETE" : "PUT";

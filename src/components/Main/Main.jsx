@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Card from "./Card/Card";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import EditProfile from "./popup/EditProfile/EditProfile";
@@ -17,7 +17,11 @@ function Main(props) {
     <main className="content">
       <section className="content__profile">
         <div className="content__pencil">
-          <img className="content__image" src={currentUser.avatar} />
+          <img
+            className="content__image"
+            src={currentUser.avatar}
+            alt="avatar de usuario"
+          />
           <button
             onClick={props.onEditAvatarclick}
             className="content__image-overlay"

@@ -65,7 +65,7 @@ function App() {
 
   function handleCreateCard(card) {
     api.createCard(card).then((newCard) => {
-      setCards((state) => [...state, newCard]);
+      setCards((state) => [newCard, ...state]);
       closeAllPopups();
     });
   }
@@ -82,6 +82,7 @@ function App() {
     (async () => {
       await api.editAvatar(data).then((newData) => {
         setUserAvatar(newData);
+        setCurrentUser({ ...currentUser, avatar: newData.avatar });
         closeAllPopups();
       });
     })();
@@ -109,10 +110,6 @@ function App() {
   function handleEditProfile(data) {
     handleUpdateUser(data.name, data.about);
     setIsEditProfilePopupOpen(false);
-  }
-
-  function handleEditPlace() {
-    setIsAddPlacePopupOpen(false);
   }
 
   function handleDeleteTrash() {

@@ -1,4 +1,4 @@
-import React, { children } from "react";
+import { useEffect } from "react";
 
 function Popup({
   onClose,
@@ -17,6 +17,15 @@ function Popup({
   function handleClickClose() {
     onClose();
   }
+  useEffect(() => {
+    const close = (e) => {
+      if (e.keyCode === 27) {
+        onClose();
+      }
+    };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, []);
   return (
     <>
       <div className={`popup ${isOpen ? "popup_show" : ""}`} id={name}>
